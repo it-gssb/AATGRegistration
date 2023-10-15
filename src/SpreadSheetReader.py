@@ -16,6 +16,8 @@ class Reader:
     
     def GetIthRowRecord(self, row):
         #'StudentFirstName', 'StudentLastName', 'StudentGSSBEmail', 'LingcoPwd', 'StudentCode'
-        return self.StudentRecords.iloc[row, [1, 0, 5, 7, 6]]
+        return self.StudentRecords.loc[row, ['StudentFirstName', 'StudentLastName',
+                                             'StudentGSSBEmail', 'LingcoPwd',
+                                             'StudentCode']]
         
         
